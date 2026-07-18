@@ -108,6 +108,17 @@ Primary interests:
 - Domain knowledge base applications
 - Agent and MCP integration
 
+## Motivation for Open-Source Contribution
+
+I hope to use this program as an opportunity to transform my interdisciplinary research experience into practical open-source contributions.
+
+My current work focuses on human behavior understanding, LLM/RAG-assisted intervention generation, multi-agent workflow design, and human-in-the-loop evaluation. Through participation in the Tencent Open Source Talent program, I hope to deepen my understanding of real-world AI systems, especially document processing, retrieval-augmented generation, evaluation, and agent workflows.
+
+I am willing to begin with project documentation, environment setup, testing, issue reproduction, and small-scale improvements. I hope to gradually contribute reusable evaluation materials, technical documentation, application examples, or code improvements to the community.
+
+Rather than treating this as a one-time application task, I hope to establish a sustainable open-source learning and contribution process through transparent records, constructive communication, and continuous iteration.
+
+
 ## Contact
 
 - Email: jinfeiling@connect.hku.hk
