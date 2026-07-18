@@ -72,7 +72,6 @@ Explored structured occupant behavior representation and spatio-temporal behavio
 - LLM-based workflow design
 - Retrieval-augmented generation
 - Multi-agent workflow concepts
-- Prompt-based prototyping
 - Human-in-the-loop evaluation
 
 ### Simulation and Experiment
@@ -112,4 +111,4 @@ Primary interests:
 ## Contact
 
 - Email: jinfeiling@connect.hku.hk
-- GitHub: https://github.com/YOUR-USERNAME
+- GitHub: https://github.com/jinfeiling2-cpu
