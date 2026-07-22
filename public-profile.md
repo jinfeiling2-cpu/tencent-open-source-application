@@ -82,18 +82,6 @@ Explored structured occupant behavior representation and spatio-temporal behavio
 - Building performance simulation
 - Behavioral scenario design
 
-## Current Open-Source Preparation
-
-I am currently preparing for the Tencent Open Source Talent program, with a focus on the WeKnora project.
-
-My preparation includes:
-
-- Reading and summarizing project documentation
-- Understanding the document-to-RAG technical workflow
-- Preparing a local deployment and testing plan
-- Designing a small evaluation set for complex domain documents
-- Learning GitHub Issue and Pull Request workflows
-- Exploring possible contributions in documentation, testing, evaluation, and domain knowledge applications
 
 ## Current Target Project
 
@@ -108,15 +96,18 @@ Primary interests:
 - Domain knowledge base applications
 - Agent and MCP integration
 
-## Motivation for Open-Source Contribution
+## Project Motivation
 
-I hope to use this program as an opportunity to transform my interdisciplinary research experience into practical open-source contributions.
+I hope to use the Tencent Open Source Talent program to transform
+my interdisciplinary research experience into practical and reusable
+open-source contributions.
 
-My current work focuses on human behavior understanding, LLM/RAG-assisted intervention generation, multi-agent workflow design, and human-in-the-loop evaluation. Through participation in the Tencent Open Source Talent program, I hope to deepen my understanding of real-world AI systems, especially document processing, retrieval-augmented generation, evaluation, and agent workflows.
-
-I am willing to begin with project documentation, environment setup, testing, issue reproduction, and small-scale improvements. I hope to gradually contribute reusable evaluation materials, technical documentation, application examples, or code improvements to the community.
-
-Rather than treating this as a one-time application task, I hope to establish a sustainable open-source learning and contribution process through transparent records, constructive communication, and continuous iteration.
+I am willing to begin with a small but complete prototype, including
+structured schemas, reproducible examples, documentation, testing,
+and human-feedback records. I also hope to learn how to connect this
+prototype with WeKnora through APIs or MCP tools and gradually
+contribute examples, evaluation materials, documentation, issues,
+or code improvements to the community.
 
 
 ## Contact
