@@ -17,7 +17,16 @@ the Tencent Open Source Talent program.
 
 The proposed prototype, TIF Core, extends a conventional RAG workflow:
 
-Evidence → Actionable Target → Intervention Candidate → Human Feedback
+```text
+Retrieved Evidence
+        ↓
+Actionable Target Discovery
+        ↓
+Structured Intervention Generation
+        ↓
+Human-in-the-Loop Feedback
+        ↓
+Reusable Structured Records
 
 It aims to help domain RAG systems move beyond question answering
 toward evidence-grounded, context-aware, and human-reviewed actions.
