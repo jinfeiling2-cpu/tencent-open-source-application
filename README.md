@@ -38,19 +38,11 @@ traceable, and reviewable interventions.
 
 ## Repository Structure
 
-- `profile/`: public research profile
-- `proposal/`: application proposal
-- `research/`: project rationale and WeKnora integration notes
+- [Public Profile](public-profile.md): public research profile
+- [Project Application Proposal](project-application-proposal.md): application proposal
 - `tif-core/`: lightweight open-source prototype
-- `progress/`: weekly implementation plan
+- [Weekly Plan](weekly-plan.md): weekly implementation plan
 
-
-## Application Materials
-
-- [Public Profile](profile/public-profile.md)
-- [Project Proposal](proposal/application-proposal.md)
-- [Project Rationale](research/project-rationale.md)
-- [TIF Core Prototype](tif-core/README.md)
 
 ## Disclaimer
 
