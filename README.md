@@ -27,6 +27,7 @@ Structured Intervention Generation
 Human-in-the-Loop Feedback
         ↓
 Reusable Structured Records
+```
 
 It aims to help domain RAG systems move beyond question answering
 toward evidence-grounded, context-aware, and human-reviewed actions.
