@@ -1,101 +1,123 @@
-Week 1：项目理解与环境搭建
+# Weekly Plan
 
-阅读README、文档和贡献指南；
+## Expected Growth
 
-理解代码目录；
+- Understand WeKnora’s basic RAG and Agent workflows.
+- Learn how retrieval evidence and citations are returned and reused.
+- Build an evidence-to-action workflow with structured human feedback.
+- Complete one practical open-source contribution, such as an Issue, example, documentation improvement, or small Pull Request.
 
-完成本地部署；
+## Expected Technologies and Modules
 
-跑通基础问答；
+- WeKnora document retrieval and citation outputs
+- Structured LLM generation
+- JSON schema validation
+- Human-in-the-loop feedback
+- REST API integration
+- Possible MCP integration
 
-记录配置和问题。
+---
 
-交付物：
+## Week 1 — Understand WeKnora and Define the Interface
 
-项目概览；
+### Tasks
 
-架构笔记；
+- Read the main documentation and contribution guidelines.
+- Run the basic local RAG workflow.
+- Inspect the format of retrieved evidence and citations.
+- Define the input, output, and MVP boundaries of TIF Core.
 
-部署记录；
+### Deliverables
 
-基础运行截图。
+- Environment setup record
+- Basic pipeline notes
+- Initial `tif-core/README.md`
+- Confirmed MVP scope
 
-Week 2：测试资料与评测集设计
+---
 
-选择公开领域文档；
+## Week 2 — Schemas and Target Discovery
 
-准备复杂PDF、表格和长文档；
+### Tasks
 
-设计事实题、综合题和证据题；
+- Define the Target, Intervention, and Feedback schemas.
+- Prepare the first building-domain example.
+- Implement `discover_targets()`.
+- Convert evidence and context into one to three target cards.
 
-建立标准答案和证据位置。
+### Deliverables
 
-交付物：
+- `schemas.py`
+- `examples/building_case.json`
+- Runnable target-discovery example
 
-5—10份测试文档；
+---
 
-20—30个问题；
+## Week 3 — Intervention Generation and Validation
 
-初步评测规范。
+### Tasks
 
-Week 3：基线测试与错误分析
+- Implement `generate_interventions()`.
+- Generate two to three intervention candidates for each target.
+- Require fields such as evidence, trigger, action steps, and risks.
+- Implement basic validation for missing or invalid fields.
 
-测试默认RAG流程；
+### Deliverables
 
-分析解析、检索、重排、生成和引用错误；
+- Structured intervention cards
+- `validate_intervention()`
+- Initial validation results
 
-整理典型失败案例。
+---
 
-交付物：
+## Week 4 — Human Feedback and End-to-End Demo
 
-基线测试结果；
+### Tasks
 
-错误类型表；
+- Add separate feedback for targets and interventions.
+- Support field-level revision comments.
+- Complete the full workflow in `app.py`.
+- Save the final structured record as JSON.
 
-Issue候选问题。
+### Deliverables
 
-Week 4：小范围优化或功能原型
+- Evidence → Target → Intervention → Feedback demo
+- Human-feedback record
+- Example output file
 
-选择一个重点：
+---
 
-评测模板；
+## Week 5 — WeKnora Integration and Community Contribution
 
-复杂文档测试；
+### Tasks
 
-引用准确率分析；
+- Add a mock knowledge provider.
+- Prepare a WeKnora API adapter skeleton.
+- Connect real retrieval results where feasible.
+- Document the integration process and limitations.
+- Prepare a relevant Issue or Draft Pull Request.
 
-垂直领域Demo；
+### Deliverables
 
-文档或配置改进。
+- WeKnora integration notes
+- Adapter skeleton or working connection
+- Issue or Draft Pull Request link
 
-交付物：
+---
 
-初步代码或工具；
+## Week 6 — Refinement and Final Summary
 
-对比实验；
+### Tasks
 
-Draft PR或Issue。
+- Improve documentation and error handling.
+- Add basic tests.
+- Add a second general-domain example where feasible.
+- Organize the final repository and demonstration materials.
+- Summarize future contribution directions.
 
-Week 5：完善与提交贡献
+### Deliverables
 
-根据反馈修改；
-
-补充测试；
-
-完善文档；
-
-提交Issue或PR；
-
-参与Code Review。
-
-Week 6：总结与社区交付
-
-整理最终成果；
-
-完善GitHub仓库；
-
-编写技术总结；
-
-准备展示材料；
-
-明确后续贡献方向。
+- Final repository
+- Technical summary
+- Demonstration materials
+- Future contribution plan
