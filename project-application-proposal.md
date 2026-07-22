@@ -6,7 +6,9 @@ WeKnora
 
 ## Proposed Topic
 
-RAG Evaluation and Domain Knowledge Application for Complex Documents
+Evidence-Grounded Target Discovery, Intervention Generation,
+and Human-in-the-Loop Feedback for Domain RAG
+
 
 ## Applicant
 
