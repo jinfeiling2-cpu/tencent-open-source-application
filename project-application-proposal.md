@@ -15,12 +15,12 @@ Ph.D. Candidate, The University of Hong Kong
 
 ## Timeline Plan
 
-Check weekly-plan.md
+Check [weekly-plan.md](weekly-plan.md)
 
 ## Open Source Experience
 
-Check open-source-experience.md
+Check [open-source-experience.md](open-source-experience.md)
 
 ## Additional Information
 
-Check public-profile.md
+Check [public-profile.md](public-profile.md)
