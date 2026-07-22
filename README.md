@@ -1,50 +1,59 @@
-# tencent-open-source-application
-Application materials, project notes, and practice records for Tencent Open Source Talent.
-
 # Tencent Open Source Talent Application
 
-This repository records my preparation and application materials for the Tencent Open Source Talent program.
+## Target Project
 
-## About Me
+WeKnora
 
-I am a Ph.D. candidate at The University of Hong Kong with an interdisciplinary background in architecture, built environment, human behavior, and AI-assisted decision systems.
+## Proposed Direction
 
-My current research focuses on:
+Evidence-Grounded Target Discovery, Intervention Generation,
+and Human-in-the-Loop Feedback for Domain RAG
 
-- AI-assisted human behavior understanding
-- Intelligent intervention generation
-- Large language models and RAG
-- Multi-agent workflows
-- Human-in-the-loop evaluation
-- AI for the built environment
+## Overview
 
-## Target Projects
+This repository contains my application proposal, research rationale,
+technical preparation, and a lightweight open-source prototype for
+the Tencent Open Source Talent program.
 
-My current preferred projects are:
+The proposed prototype, TIF Core, extends a conventional RAG workflow:
 
-1. WeKnora
-2. Tencent Hunyuan Hy3
-3. tRPC-Agent
+Evidence → Actionable Target → Intervention Candidate → Human Feedback
 
-## Repository Contents
+It aims to help domain RAG systems move beyond question answering
+toward evidence-grounded, context-aware, and human-reviewed actions.
 
-This repository will include:
+## Why This Project
 
-- Project application proposal
-- Project documentation notes
-- Technical learning records
-- Issue analysis
-- Small demos and evaluation experiments
+My Ph.D. research focuses on:
 
-## Current Progress
+- human behavior understanding;
+- context-aware intervention generation;
+- LLM and RAG workflows;
+- human-in-the-loop evaluation;
+- AI for the built environment.
 
-- [x] Created GitHub repository
-- [ ] Read project README and documentation
-- [ ] Set up the local development environment
-- [ ] Run the first project demo
-- [ ] Review open issues
-- [ ] Prepare the project application proposal
+These research interests align with a general technical problem:
+how to transform retrieved domain knowledge into actionable,
+traceable, and reviewable interventions.
 
-## Contact
+## Repository Structure
 
-Please contact me through my GitHub profile.
+- `profile/`: public research profile
+- `proposal/`: application proposal
+- `research/`: project rationale and WeKnora integration notes
+- `tif-core/`: lightweight open-source prototype
+- `progress/`: weekly implementation plan
+
+
+## Application Materials
+
+- [Public Profile](profile/public-profile.md)
+- [Project Proposal](proposal/application-proposal.md)
+- [Project Rationale](research/project-rationale.md)
+- [TIF Core Prototype](tif-core/README.md)
+
+## Disclaimer
+
+This is an early-stage research and engineering prototype.
+Automated intervention evaluation does not replace expert,
+ethical, or professional review.
