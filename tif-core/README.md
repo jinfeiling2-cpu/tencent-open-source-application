@@ -17,6 +17,9 @@ Evidence
 The first example concerns building operation, but the data models and workflow
 are intended to be domain-independent.
 
+The current implementation focuses on the protocol rather than the discovery
+algorithm.
+
 ## MVP Features
 
 This deterministic first version:
