@@ -1,6 +1,6 @@
 """Pydantic data models for the TIF Core workflow."""
 
-from typing import Literal
+from typing import Annotated, Literal
 
 from pydantic import BaseModel, Field, model_validator
 
@@ -28,10 +28,14 @@ class Target(BaseModel):
     target_statement: str = Field(min_length=1)
     target_type: str = Field(min_length=1)
     evidence: list[EvidenceRef] = Field(min_length=1)
-    expected_outcomes: list[str] = Field(min_length=1)
+    expected_outcomes: list[Annotated[str, Field(min_length=1)]] = Field(
+        min_length=1
+    )
     priority_reason: str = Field(min_length=1)
     confidence: float = Field(ge=0.0, le=1.0)
-    uncertainties: list[str] = Field(default_factory=list)
+    uncertainties: list[Annotated[str, Field(min_length=1)]] = Field(
+        default_factory=list
+    )
 
 
 class Intervention(BaseModel):
@@ -44,12 +48,18 @@ class Intervention(BaseModel):
     message: str = Field(min_length=1)
     delivery_channel: str = Field(min_length=1)
     trigger_condition: str = Field(min_length=1)
-    implementation_steps: list[str] = Field(min_length=1)
+    implementation_steps: list[Annotated[str, Field(min_length=1)]] = Field(
+        min_length=1
+    )
     evidence: list[EvidenceRef] = Field(min_length=1)
-    expected_outcomes: list[str] = Field(min_length=1)
+    expected_outcomes: list[Annotated[str, Field(min_length=1)]] = Field(
+        min_length=1
+    )
     constraints: InterventionConstraints
-    risks: list[str] = Field(min_length=1)
-    verification_questions: list[str] = Field(min_length=1)
+    risks: list[Annotated[str, Field(min_length=1)]] = Field(min_length=1)
+    verification_questions: list[
+        Annotated[str, Field(min_length=1)]
+    ] = Field(min_length=1)
 
 
 class HumanFeedback(BaseModel):

@@ -51,6 +51,8 @@ python -m pip install -r requirements.txt
 python app.py
 ```
 
+On systems where Python is named `python3`, use `python3` in the same commands.
+
 The program prints each workflow stage and creates:
 
 ```text
