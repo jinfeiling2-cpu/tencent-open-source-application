@@ -1,0 +1,222 @@
+{
+  "case_id": "building_case_001",
+  "context": {
+    "domain": "building_operation",
+    "scenario": "Office cooling operation",
+    "observed_problem": "Windows are sometimes opened while mechanical cooling is active.",
+    "stakeholders": [
+      "occupants",
+      "facility manager"
+    ],
+    "constraints": [
+      "low cost",
+      "non-mandatory",
+      "easy to deploy"
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "doc_01",
+      "chunk_id": "chunk_01",
+      "text": "Simultaneous window opening and mechanical cooling may increase cooling demand and contribute to avoidable energy use."
+    },
+    {
+      "source_id": "doc_02",
+      "chunk_id": "chunk_02",
+      "text": "Timely and understandable feedback can reduce information asymmetry and help occupants make better operational decisions."
+    },
+    {
+      "source_id": "doc_03",
+      "chunk_id": "chunk_03",
+      "text": "Behavioral interventions should remain transparent, non-mandatory, and easy to ignore or opt out of."
+    },
+    {
+      "source_id": "doc_04",
+      "chunk_id": "chunk_04",
+      "text": "Ventilation decisions should consider outdoor temperature and air quality rather than treating every window-opening event as inappropriate."
+    }
+  ],
+  "targets": [
+    {
+      "target_id": "T001",
+      "target_statement": "Reduce unnecessary simultaneous window opening and mechanical cooling.",
+      "target_type": "behavioral_operational_conflict",
+      "evidence": [
+        {
+          "source_id": "doc_01",
+          "chunk_id": "chunk_01",
+          "claim": "Simultaneous window opening and mechanical cooling may increase cooling demand and contribute to avoidable energy use."
+        }
+      ],
+      "expected_outcomes": [
+        "Reduced avoidable cooling energy use",
+        "Maintained occupant comfort"
+      ],
+      "priority_reason": "The issue has a clear operational consequence and can be addressed with a lightweight, non-mandatory intervention.",
+      "confidence": 0.82,
+      "uncertainties": [
+        "Outdoor temperature and air-quality conditions are not fully known."
+      ]
+    }
+  ],
+  "interventions": [
+    {
+      "intervention_id": "I001",
+      "target_id": "T001",
+      "title": "Context-aware window-HVAC reminder",
+      "mechanism": "decision_information",
+      "message": "Cooling is active while this window is open. Consider closing the window when outdoor conditions do not require ventilation.",
+      "delivery_channel": "digital_display",
+      "trigger_condition": "A window is open while HVAC cooling is active; outdoor temperature and air-quality conditions must also be considered before deployment.",
+      "implementation_steps": [
+        "Detect simultaneous window opening and mechanical cooling.",
+        "Check whether outdoor conditions make window ventilation necessary.",
+        "Display a short and transparent reminder.",
+        "Allow occupants to ignore or dismiss the reminder."
+      ],
+      "evidence": [
+        {
+          "source_id": "doc_01",
+          "chunk_id": "chunk_01",
+          "claim": "Simultaneous window opening and mechanical cooling may increase cooling demand and contribute to avoidable energy use."
+        },
+        {
+          "source_id": "doc_02",
+          "chunk_id": "chunk_02",
+          "claim": "Timely and understandable feedback can reduce information asymmetry and help occupants make better operational decisions."
+        },
+        {
+          "source_id": "doc_03",
+          "chunk_id": "chunk_03",
+          "claim": "Behavioral interventions should remain transparent, non-mandatory, and easy to ignore or opt out of."
+        },
+        {
+          "source_id": "doc_04",
+          "chunk_id": "chunk_04",
+          "claim": "Ventilation decisions should consider outdoor temperature and air quality rather than treating every window-opening event as inappropriate."
+        }
+      ],
+      "expected_outcomes": [
+        "Reduced avoidable cooling energy use",
+        "Maintained occupant comfort"
+      ],
+      "constraints": {
+        "mandatory": false,
+        "cost_level": "low",
+        "opt_out": true
+      },
+      "risks": [
+        "The reminder may be inappropriate when outdoor ventilation is needed.",
+        "Repeated reminders may cause notification fatigue."
+      ],
+      "verification_questions": [
+        "Does the reminder explain why it appears?",
+        "Can occupants easily ignore or dismiss it?",
+        "Does the trigger account for relevant outdoor conditions?"
+      ]
+    },
+    {
+      "intervention_id": "I002",
+      "target_id": "T001",
+      "title": "Energy consequence feedback",
+      "mechanism": "feedback",
+      "message": "An open window during mechanical cooling may increase avoidable cooling demand. Review outdoor conditions before choosing an action.",
+      "delivery_channel": "dashboard_or_mobile_notification",
+      "trigger_condition": "A window and mechanical cooling remain active at the same time for a defined monitoring period.",
+      "implementation_steps": [
+        "Detect the window-HVAC conflict.",
+        "Estimate and describe the likely operational consequence without claiming an exact energy saving.",
+        "Send the feedback through the dashboard or mobile notification.",
+        "Let occupants dismiss the message without penalty."
+      ],
+      "evidence": [
+        {
+          "source_id": "doc_01",
+          "chunk_id": "chunk_01",
+          "claim": "Simultaneous window opening and mechanical cooling may increase cooling demand and contribute to avoidable energy use."
+        },
+        {
+          "source_id": "doc_02",
+          "chunk_id": "chunk_02",
+          "claim": "Timely and understandable feedback can reduce information asymmetry and help occupants make better operational decisions."
+        },
+        {
+          "source_id": "doc_03",
+          "chunk_id": "chunk_03",
+          "claim": "Behavioral interventions should remain transparent, non-mandatory, and easy to ignore or opt out of."
+        },
+        {
+          "source_id": "doc_04",
+          "chunk_id": "chunk_04",
+          "claim": "Ventilation decisions should consider outdoor temperature and air quality rather than treating every window-opening event as inappropriate."
+        }
+      ],
+      "expected_outcomes": [
+        "Reduced avoidable cooling energy use",
+        "Maintained occupant comfort"
+      ],
+      "constraints": {
+        "mandatory": false,
+        "cost_level": "low",
+        "opt_out": true
+      },
+      "risks": [
+        "A general consequence message may overstate impact in some conditions.",
+        "Notifications may be ignored if they are too frequent."
+      ],
+      "verification_questions": [
+        "Is the consequence stated without unsupported numerical claims?",
+        "Is the message understandable and non-mandatory?",
+        "Can the user opt out of future notifications?"
+      ]
+    }
+  ],
+  "validations": [
+    {
+      "intervention_id": "I001",
+      "passed": true,
+      "checks": {
+        "has_target_id": true,
+        "has_evidence": true,
+        "has_trigger_condition": true,
+        "has_implementation_steps": true,
+        "has_risks": true,
+        "has_verification_questions": true,
+        "is_non_mandatory": true,
+        "allows_opt_out": true
+      }
+    },
+    {
+      "intervention_id": "I002",
+      "passed": true,
+      "checks": {
+        "has_target_id": true,
+        "has_evidence": true,
+        "has_trigger_condition": true,
+        "has_implementation_steps": true,
+        "has_risks": true,
+        "has_verification_questions": true,
+        "is_non_mandatory": true,
+        "allows_opt_out": true
+      }
+    }
+  ],
+  "feedback": {
+    "target_id": "T001",
+    "target_decision": "accept",
+    "target_relevance": 5,
+    "target_priority": 4,
+    "target_evidence_support": 4,
+    "intervention_id": "I001",
+    "intervention_decision": "revise",
+    "evidence_grounding": 4,
+    "context_fit": 3,
+    "actionability": 5,
+    "clarity": 4,
+    "autonomy": 5,
+    "risk_control": 3,
+    "field_to_modify": "trigger_condition",
+    "requested_change": "Explicitly include outdoor temperature and air-quality conditions.",
+    "reviewer_role": "facility_manager"
+  }
+}

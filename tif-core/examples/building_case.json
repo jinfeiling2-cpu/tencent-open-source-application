@@ -1,1 +1,39 @@
-
+{
+  "case_id": "building_case_001",
+  "context": {
+    "domain": "building_operation",
+    "scenario": "Office cooling operation",
+    "observed_problem": "Windows are sometimes opened while mechanical cooling is active.",
+    "stakeholders": [
+      "occupants",
+      "facility manager"
+    ],
+    "constraints": [
+      "low cost",
+      "non-mandatory",
+      "easy to deploy"
+    ]
+  },
+  "evidence": [
+    {
+      "source_id": "doc_01",
+      "chunk_id": "chunk_01",
+      "text": "Simultaneous window opening and mechanical cooling may increase cooling demand and contribute to avoidable energy use."
+    },
+    {
+      "source_id": "doc_02",
+      "chunk_id": "chunk_02",
+      "text": "Timely and understandable feedback can reduce information asymmetry and help occupants make better operational decisions."
+    },
+    {
+      "source_id": "doc_03",
+      "chunk_id": "chunk_03",
+      "text": "Behavioral interventions should remain transparent, non-mandatory, and easy to ignore or opt out of."
+    },
+    {
+      "source_id": "doc_04",
+      "chunk_id": "chunk_04",
+      "text": "Ventilation decisions should consider outdoor temperature and air quality rather than treating every window-opening event as inappropriate."
+    }
+  ]
+}
