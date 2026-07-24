@@ -73,6 +73,30 @@ TIF Core: evidence → targets → interventions → human feedback
 
 The current MVP uses local evidence so it remains easy to run and explain.
 
+## Evidence-to-Action Skill Wrapper
+
+TIF Core remains the underlying workflow. `skill.py` adds one stable public
+interface, `evidence_to_action()`, without duplicating or replacing the core
+target-discovery, intervention-generation, or validation logic.
+
+The Skill accepts generic context, constraints, and retrieved evidence. It
+returns targets, intervention candidates, validation results, evidence
+traceability, and a package of questions for human review. Human acceptance,
+revision, rejection, and field-level feedback remain outside the first Skill
+call. The included building case is only an example.
+
+```bash
+python app.py
+python skill.py
+```
+
+- `app.py` demonstrates the complete original TIF workflow, including mock
+  human feedback and a saved JSON record.
+- `skill.py` demonstrates the reusable, framework-facing Skill interface.
+
+The Skill remains deterministic and requires no API key. It could later be
+exposed through a REST API, MCP tool, or Agent framework.
+
 ## Future Extensions
 
 - Replace deterministic mock generation with an LLM.
